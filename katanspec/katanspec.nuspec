@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>katanspec</id>
+    <title>Kata Nspec</title>
+    <version>1.0.1</version>
+    <authors>Brandon Pugh</authors>
+    <owners>Brandon Pugh</owners>
+    <summary>NSpec code katas without Visual Studio</summary>
+    <description>These are the tools and utilities necessary to setup your development environment to get started working on code katas or general .Net development with Visual Studio.</description>
+    <projectUrl>https://github.com/amirrajan/katanspec</projectUrl>
+    <tags>vim utilities</tags>
+    <iconUrl>http://nspec.org/images/logo.png</iconUrl>
+    <dependencies>
+      <dependency id='git.install' />
+      <dependency id='vim' />
+      <dependency id='ruby' />
+      <dependency id='ctags' />
+      <dependency id='growl' />
+      <dependency id='conemu' />
+      <dependency id='strawberryperl' />
+      <dependency id='ack' />
+    </dependencies>
+  </metadata>
+</package>
