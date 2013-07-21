@@ -7,7 +7,7 @@
     <authors>Brandon Pugh</authors>
     <owners>Brandon Pugh</owners>
     <summary>NSpec code katas without Visual Studio</summary>
-    <description>These are the tools and utilities necessary to setup your development environment to get started working on code katas or general .Net development with Visual Studio.</description>
+    <description>These are the tools and utilities necessary to setup your development environment to get started working on code katas or general .Net development without Visual Studio.</description>
     <projectUrl>https://github.com/amirrajan/katanspec</projectUrl>
     <tags>vim utilities</tags>
     <iconUrl>http://nspec.org/images/logo.png</iconUrl>
