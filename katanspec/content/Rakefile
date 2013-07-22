@@ -1,0 +1,53 @@
+def install_pathogen
+  dir = File.expand_path "#{File.expand_path("../", __FILE__)}/autoload"
+  FileUtils.mkdir_p(dir) unless File.exists?(dir)
+  puts dir
+  pdir = "#{dir}/vim-pathogen"
+  puts pdir
+  if(!File.exists?(pdir))
+    sh "git clone git://github.com/tpope/vim-pathogen.git \"#{pdir}\"" 
+  else
+    Dir.chdir pdir do
+      sh "git pull"
+    end
+  end
+  FileUtils.cp("#{pdir}/autoload/pathogen.vim", "#{dir}/pathogen.vim")
+#  sh "curl -Ssko #{dir}/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
+end
+
+def install_plugin(repo)
+  name = File.basename(repo)
+  cwd = File.expand_path("../", __FILE__)
+  dir = File.expand_path("#{cwd}/bundle/#{name}")
+
+  namespace(name) do
+    task :install do
+      unless File.exist?(dir)
+        sh "git clone git://github.com/#{repo}.git \"#{dir}\""
+      else
+        Dir.chdir dir do
+          sh "git pull"
+        end
+      end
+    end
+  end
+
+  task name do
+    puts
+    puts "*" * 40
+    puts "*#{"Installing #{name}".center(38)}*"
+    puts "*" * 40
+    puts
+    Rake::Task["#{name}:install"].invoke
+  end
+  task :default => name
+end
+
+
+install_pathogen
+
+# Colors
+install_plugin "scrooloose/nerdtree.git"
+install_plugin "kien/ctrlp.vim.git"
+install_plugin "mileszs/ack.vim.git"
+
