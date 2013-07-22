@@ -46,8 +46,8 @@ end
 
 install_pathogen
 
-# Colors
-install_plugin "scrooloose/nerdtree.git"
-install_plugin "kien/ctrlp.vim.git"
-install_plugin "mileszs/ack.vim.git"
+# Colorscrooloose/nerdtrees
+install_plugin "scrooloose/nerdtree"
+install_plugin "kien/ctrlp.vim"
+install_plugin "mileszs/ack.vim"
 
