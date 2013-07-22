@@ -33,6 +33,7 @@ def install_plugin(repo)
   end
 
   task name do
+
     puts
     puts "*" * 40
     puts "*#{"Installing #{name}".center(38)}*"
@@ -46,8 +47,11 @@ end
 
 install_pathogen
 
-# Colorscrooloose/nerdtrees
 install_plugin "scrooloose/nerdtree"
 install_plugin "kien/ctrlp.vim"
 install_plugin "mileszs/ack.vim"
+install_plugin "ervandew/supertab"
+install_plugin "OrangeT/vim-csharp"
+install_plugin "Lokaltog/vim-easymotion"
+install_plugin "garbas/vim-snipmate"
 
