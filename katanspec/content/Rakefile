@@ -1,28 +1,19 @@
 def install_pathogen
   dir = File.expand_path "#{File.expand_path("../", __FILE__)}/autoload"
   FileUtils.mkdir_p(dir) unless File.exists?(dir)
-  puts dir
   pdir = "#{dir}/vim-pathogen"
-  puts pdir
-  if(!File.exists?(pdir))
-    sh "git clone git://github.com/tpope/vim-pathogen.git \"#{pdir}\"" 
-  else
-    Dir.chdir pdir do
-      sh "git pull"
-    end
-  end
+  install_plugin "tpope/vim-pathogen", "autoload"
   FileUtils.cp("#{pdir}/autoload/pathogen.vim", "#{dir}/pathogen.vim")
-#  sh "curl -Ssko #{dir}/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim"
 end
 
-def install_plugin(repo)
+def install_plugin(repo, pluginDir = "bundle")
   name = File.basename(repo)
   cwd = File.expand_path("../", __FILE__)
-  dir = File.expand_path("#{cwd}/bundle/#{name}")
+  dir = File.expand_path("#{cwd}/#{pluginDir}/#{name}")
 
   namespace(name) do
     task :install do
-      unless File.exist?(dir)
+      if(!File.exists?(dir))
         sh "git clone git://github.com/#{repo}.git \"#{dir}\""
       else
         Dir.chdir dir do
