@@ -3,7 +3,7 @@
   <metadata>
     <id>katanspec</id>
     <title>Kata Nspec</title>
-    <version>1.0.3</version>
+    <version>1.0.5</version>
     <authors>Brandon Pugh</authors>
     <owners>Brandon Pugh</owners>
     <summary>NSpec code katas without Visual Studio</summary>
