@@ -7,7 +7,7 @@ Write-Host $contentPath
 
 
 # create vim directory
-$vimdir = $Env:userprofile + "\.vim"
+$vimdir = $Env:userprofile + "\vimfiles"
 #$toolsPath = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $check = Test-Path -PathType Container $vimdir
 if($check -eq $false){
