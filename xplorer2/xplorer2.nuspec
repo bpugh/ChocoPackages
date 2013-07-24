@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>xplorer2</id>
+    <title>Xplorer2</title>
+    <version>2.3.0.1</version>
+    <authors>Zabkat</authors>
+    <owners>Brandon Pugh</owners>
+    <summary>Windows explorer replacement</summary>
+    <description>xplorer² is a desktop file manager combining the simplicity of windows explorer with the speed and efficiency of traditional dual pane orthodox file managers, helping you be productive with your documents, pictures, music, source code and other files.</description>
+    <projectUrl>http://zabkat.com</projectUrl>
+    <tags>xplorer2 windows explorer</tags>
+    <iconUrl>http://zabkat.com/img/x2icon.gif</iconUrl>
+  </metadata>
+</package>
